@@ -1,0 +1,23 @@
+#binary search method --- runtime 0ms
+
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        l,r=0,len(nums)-1
+        while l<=r:
+            m=(l+r)//2
+            if nums[m]==target:
+                return m
+                break
+            elif nums[m]<target:
+                l=m+1
+            elif nums[m]>target:
+                r=m-1
+        return -1
+
+#using funtion function in python -- runtime 0ms
+
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        if target in nums:
+            return nums.index(target)
+        return -1
