@@ -1,0 +1,23 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+        o=["(","{","["]
+        c=[")","}","]"]
+        l=[]
+        k=[]
+        for j in s:
+            if j in o:
+                l.append(j)
+            elif (not l) or ((j in c) and l[-1] == o[c.index(j)]):
+
+                if len(l)>=1:
+
+                    l.pop()
+                elif not l:
+                    return False
+            elif (not l) or ((j in c) and l[-1] != o[c.index(j)]):
+                return False
+        if not l:
+            return True
+        return False
+
+            
