@@ -1,0 +1,16 @@
+class Solution:
+    def minimumRecolors(self, blocks: str, k: int) -> int:
+        ko,p,u=[],0,k
+        for j in range(len(blocks)-k+1):
+            ko.append(blocks[p:u])
+            p+=1
+            u+=1
+        i="B"*k
+        if i in ko:
+            return 0
+        else:
+            lp=[ko[j].count("W") for j in range(len(ko))]
+            return min(lp)
+
+
+        
