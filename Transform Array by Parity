@@ -1,0 +1,9 @@
+class Solution:
+    def transformArray(self, nums: List[int]) -> List[int]:
+        for j in range(len(nums)):
+            if nums[j]%2==0:
+                nums[j]=0
+            else:
+                nums[j]=1
+        return sorted(nums)
+        
