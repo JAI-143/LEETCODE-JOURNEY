@@ -1,0 +1,16 @@
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        n=0
+        p=len(nums)
+        while n==0:
+            l,k=0,1
+            n=5
+            for y in range(len(nums)-1):
+                if nums[l]>nums[k]:
+                    j=nums[l]
+                    i=nums[k]
+                    nums[l]=i
+                    nums[k]=j
+                    n=0
+                l+=1
+                k+=1
