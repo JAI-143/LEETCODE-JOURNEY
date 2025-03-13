@@ -1,0 +1,37 @@
+class Solution:
+    def findWords(self, words: List[str]) -> List[str]:
+        def check(w):
+            w1=w.lower()
+            f1=list("qwertyuiop")
+            f2=list("asdfghjkl")
+            f3=list("zxcvbnm")
+            k=w1[0]
+            if k in f1:
+                v=0
+                for j in w1:
+                    if j in f1:
+                        v+=1
+                if v==len(w1):
+                    return w
+                return
+            elif k in f2:
+                g=0
+                for j in w1:
+                    if j in f2:
+                        g+=1
+                if g==len(w1):
+                    return w
+                return
+            elif k in f3:
+                d=0
+                for j in w1:
+                    if j in f3:
+                        d+=1
+                if d==len(w1):
+                    return w
+            return
+        ans=[]
+        for j in words:
+            if check(j):
+                 ans.append(check(j))
+        return (ans)
