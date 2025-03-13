@@ -1,0 +1,15 @@
+class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        lp=s[:]
+        t=list(t)
+        l=[]
+        for j in s:
+            if j in t:
+                lo=t.index(j)
+                try:
+                    l.append(lo+l[-1])
+                except:
+                    l.append(lo)
+                t=t[t.index(j):]
+                t.remove(j)
+        return (len(l)==len(lp) and l==sorted(l))
