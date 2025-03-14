@@ -1,0 +1,11 @@
+class Solution:
+    def decompressRLElist(self, nums: List[int]) -> List[int]:
+        ans=[]
+        m=0
+        for j in range(0,len(nums),2):
+            for k in range(nums[j]):
+
+                ans.append(nums[j+1])
+        return (ans)
+
+        
