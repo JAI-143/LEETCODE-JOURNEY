@@ -1,0 +1,14 @@
+class Solution:
+    def numOfStrings(self, patterns: List[str], word: str) -> int:
+        s=[]
+        for j in range(len(word)):
+            for k in range(len(word)):
+                if word[j:k+1]:
+
+                    s.append(word[j:k+1])
+        c=0
+        for j in patterns:
+            if j in s:
+                c+=1
+        return c
+        
