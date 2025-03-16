@@ -1,0 +1,15 @@
+#method 1
+
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        return min(nums)
+
+
+#method 2
+
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        for j in range(len(nums)-1):
+            if nums[j]>nums[j+1]:
+                return nums[j+1]
+        return nums[0]  
