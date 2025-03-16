@@ -1,0 +1,13 @@
+
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        l=[[nums.count(l),l] for l in set(nums)]
+        l.sort(reverse=True)
+        ans=[]
+        for lp in range(k):
+            ans.append(l[lp][1])
+        return (ans)
+
+
+
+        
