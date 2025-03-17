@@ -1,0 +1,8 @@
+class Solution:
+    def divideArray(self, nums: List[int]) -> bool:
+        k=[[k,nums.count(k)] for k in set(nums)]
+        for j,g in k:
+            if g%2!=0:
+                return False
+        return True
+        
