@@ -1,0 +1,7 @@
+class Solution:
+    def subarraySum(self, nums: List[int]) -> int:
+        m=[]
+        for j in range(len(nums)):
+            s=max(0, j - nums[j])
+            m.append(sum(nums[s:j+1]))
+        return sum(m)
