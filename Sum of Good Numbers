@@ -1,0 +1,22 @@
+class Solution:
+    def sumOfGoodNumbers(self, nums: List[int], k: int) -> int:
+        ans=[]
+        for j in range(len(nums)):
+            l,p=j-k,j+k
+            if (l>=0 and l<=len(nums)-1) and (p>=0 and p<=len(nums)-1):
+                print("1")
+                if nums[j]>nums[l] and nums[j]>nums[p]:
+                    ans.append(nums[j])
+            elif (l<0) and (p>=0 and p<=len(nums)-1):
+                print("2")
+                if nums[j]>nums[p]:
+                    ans.append(nums[j])
+            elif (l>=0 and l<=len(nums)-1) and (p>len(nums)-1):
+                print("3")
+                if nums[j]>nums[l]:
+                    ans.append(nums[j])
+        if ans:
+            return sum(ans)
+        return 0
+
+        
