@@ -1,0 +1,16 @@
+class Solution:
+    def largestInteger(self, nums: List[int], k: int) -> int:
+        s=[]
+        for j in range(len(nums)-k+1):
+            s.append(nums[j:j+k])
+        a=[]
+        for k in range(len(nums)):
+            c=0
+            for l in range(len(s)):
+                if nums[k] not in s[l]:
+                    c+=1
+            if c==len(s)-1:
+                a.append(nums[k])
+        if a:
+            return max(a)
+        return -1
