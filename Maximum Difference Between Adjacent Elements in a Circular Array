@@ -1,0 +1,12 @@
+class Solution:
+    def maxAdjacentDistance(self, nums: List[int]) -> int:
+        k=[]
+        for j in range(len(nums)):
+            if len(nums[j:j+2])==2:
+
+                k.append(nums[j:j+2])
+        k.append([nums[0],nums[-1]])
+        lp=[]
+        for l in k:
+            lp.append(abs(l[0]-l[1]))
+        return max(lp)
