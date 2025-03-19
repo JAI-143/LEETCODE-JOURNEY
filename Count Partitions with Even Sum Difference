@@ -1,0 +1,7 @@
+class Solution:
+    def countPartitions(self, nums: List[int]) -> int:
+        c=0
+        for j in range(1,len(nums)):
+            if abs((sum(nums[:j]))-(sum(nums[j:])))%2==0:
+                c+=1
+        return c
