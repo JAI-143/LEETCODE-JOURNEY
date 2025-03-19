@@ -1,0 +1,7 @@
+from itertools import permutations as jai
+class Solution:
+    def totalNumbers(self, digits: List[int]) -> int:
+        p=[j for j in (jai(digits,3)) if j[-1]%2==0 and j[0]!=0]
+        p=list(set(p))
+        return (len(p))
+        
