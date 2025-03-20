@@ -1,0 +1,7 @@
+class Solution:
+    def repeatedCharacter(self, s: str) -> str:
+        lol=[]
+        for j in s:
+            if j in lol:
+                return j
+            lol.append(j)
