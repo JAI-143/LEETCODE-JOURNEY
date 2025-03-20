@@ -1,0 +1,13 @@
+class Solution:
+    def minimumMoves(self, s: str) -> int:
+        if "X" not in s:
+            return 0
+        c=0
+        l=0
+        while l<=len(s)-1:
+            if s[l]=="X":
+                l+=3
+                c+=1
+            else:
+                l+=1
+        return c
