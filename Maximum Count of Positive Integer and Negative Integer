@@ -1,0 +1,6 @@
+class Solution:
+    def maximumCount(self, nums: List[int]) -> int:
+        ni=[j for j in nums if j<0]
+        pi=[j for j in nums if j>0]
+        return max(len(ni),len(pi))
+        
