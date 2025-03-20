@@ -1,0 +1,27 @@
+class Solution:
+    def repeatedSubstringPattern(self, s: str) -> bool:
+        if len(s)<2:
+            return False
+        a,b=0,1
+        while b<len(s):
+            r,l=a,b
+            while l<len(s):
+                if s[a:b] == s[r+b:l+b]:
+                    r+=b
+                    l+=b
+                else:
+                    break
+                if l>=len(s):
+                    return True
+            b+=1
+        return False
+            
+                
+                
+                
+
+         
+
+
+        
+        
