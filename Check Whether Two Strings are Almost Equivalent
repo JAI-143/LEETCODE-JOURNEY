@@ -1,0 +1,7 @@
+class Solution:
+    def checkAlmostEquivalent(self, word1: str, word2: str) -> bool:
+        l=[abs(word1.count(j)-word2.count(j)) for j in set(word1)]
+        k=[abs(word1.count(j)-word2.count(j)) for j in set(word2)]
+        return (max(l)<=3 and max(k)<=3)
+        
+        
