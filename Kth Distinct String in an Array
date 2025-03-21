@@ -1,0 +1,8 @@
+class Solution:
+    def kthDistinct(self, arr: List[str], k: int) -> str:
+        de=[j for j in arr if arr.count(j)==1]
+        print(de)
+        if len(de)>=k:
+            return de[k-1]
+        return ""
+        
