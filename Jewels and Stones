@@ -1,0 +1,10 @@
+class Solution:
+    def numJewelsInStones(self, jewels: str, stones: str) -> int:
+        stones=list(stones)
+        c=0
+        for j in jewels:
+            if j in stones:
+                c=(c+(stones.count(j)))
+                stones.remove(j)
+        return c
+        
