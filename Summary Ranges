@@ -1,0 +1,25 @@
+class Solution:
+    def summaryRanges(self, nums: List[int]) -> List[str]:
+        ans=[]
+        r,l=0,1
+        n=1
+        while l<len(nums):
+            if nums[r]+n==nums[l]:
+                l+=1
+                n+=1
+            else:
+                ans.append(nums[r:l])
+                r=l
+                l=r+1
+                n=1
+        if r<=len(nums)-1:
+            ans.append(nums[r:l])
+        fi=[]
+        for h in ans:
+            if len(h)==1:
+                fi.append(str(h[0]))
+            else:
+                fi.append(("{}->{}").format(h[0],h[-1]))
+
+        return (fi)
+
