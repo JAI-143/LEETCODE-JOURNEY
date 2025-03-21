@@ -1,0 +1,15 @@
+class Solution:
+    def countWords(self, words1: List[str], words2: List[str]) -> int:
+        c=0
+        a,b=len(words1),len(words2)
+        if a<=b:
+            for j in range(a):
+                if (words1[j] in words2) and words1.count(words1[j])==1 and words2.count(words1[j])==1:
+                    c+=1
+        else:
+            for j in range(b):
+                if (words2[j] in words1) and words1.count(words2[j])==1 and words2.count(words2[j])==1:
+                    c+=1
+        return c
+
+        
