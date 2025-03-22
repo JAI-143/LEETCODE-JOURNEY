@@ -1,0 +1,11 @@
+from collections import *
+class Solution:
+    def arrayRankTransform(self, arr: List[int]) -> List[int]:
+        a=sorted(list(set(arr)))
+        lp=defaultdict()
+        ans=[]
+        for k in range(len(a)):
+            lp[a[k]]=k+1
+        for j in arr:
+            ans.append(lp[j])
+        return ans
