@@ -1,0 +1,4 @@
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        l=[j**2 for j in nums]
+        return sorted(l)        
