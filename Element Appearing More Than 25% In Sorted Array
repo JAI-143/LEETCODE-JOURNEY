@@ -1,0 +1,6 @@
+class Solution:
+    def findSpecialInteger(self, arr: List[int]) -> int:
+        n=len(arr)/4
+        for j in arr:
+            if arr.count(j)>n:
+                return j
