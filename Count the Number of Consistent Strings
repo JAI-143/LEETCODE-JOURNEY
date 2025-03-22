@@ -1,0 +1,12 @@
+class Solution:
+    def countConsistentStrings(self, allowed: str, words: List[str]) -> int:
+        n=0
+        for j in words:
+            c=0
+            for k in j:
+                if k in allowed:
+                    c+=1
+            if c==len(j):
+                n+=1
+        return n
+        
