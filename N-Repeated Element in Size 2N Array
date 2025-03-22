@@ -1,0 +1,16 @@
+class Solution:
+    def repeatedNTimes(self, nums: List[int]) -> int:
+        for j in set(nums):
+            if nums.count(j)>1:
+                return j
+        ###################################################
+
+
+
+class Solution:
+    def repeatedNTimes(self, nums: List[int]) -> int:
+        a=[]
+        for j in nums:
+            if j in a:
+                return j
+            a.append(j)
