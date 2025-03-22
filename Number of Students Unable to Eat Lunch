@@ -1,0 +1,16 @@
+class Solution:
+    def countStudents(self, students: List[int], sandwiches: List[int]) -> int:
+        k=True
+        while k==True:
+            k=False
+            for j in range(len(students)):
+                
+                if students[0]==sandwiches[0]:
+                    students.pop(0)
+                    sandwiches.pop(0)
+                    k=True
+                else:
+                    lp=students[0]
+                    students.pop(0)
+                    students.append(lp)
+        return len(students)
