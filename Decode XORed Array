@@ -1,0 +1,11 @@
+class Solution:
+    def decode(self, encoded: List[int], first: int) -> List[int]:
+        m=[]
+        l=first
+        m.append(first)
+        for j in encoded:
+            m.append(l^j)
+            l^=j
+        return (m)
+
+        
