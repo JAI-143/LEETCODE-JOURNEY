@@ -1,0 +1,19 @@
+from collections import *
+class Solution:
+    def wordPattern(self, pattern: str, s: str) -> bool:
+
+        s=s.split()
+        print(len(pattern))
+        print(len(s))
+        if len(set(pattern))>len(set(s)) or len(pattern)!=len(s):
+            return False
+        k=defaultdict()
+        for j in range(len(pattern)):
+            if pattern[j] not in k:
+                k[pattern[j]]=s[j]
+        for j in range(len(s)):
+            if k[pattern[j]]!=s[j]:
+                return False
+        return True
+
+        
