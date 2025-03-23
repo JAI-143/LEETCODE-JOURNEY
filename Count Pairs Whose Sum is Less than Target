@@ -1,0 +1,8 @@
+class Solution:
+    def countPairs(self, nums: List[int], target: int) -> int:
+        tamil=0
+        for j in range(len(nums)):
+            for k in range(j+1,len(nums)):
+                if nums[j]+nums[k]<target:
+                    tamil+=1
+        return tamil
