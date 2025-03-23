@@ -1,0 +1,8 @@
+class Solution:
+    def maxWidthOfVerticalArea(self, points: List[List[int]]) -> int:
+        points.sort()
+        n=[]
+        for j in range(len(points)-1):
+            n.append(points[j+1][0]-points[j][0])
+        return max(n)
+        
