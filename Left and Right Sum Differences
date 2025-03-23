@@ -1,0 +1,12 @@
+class Solution:
+    def leftRightDifference(self, nums: List[int]) -> List[int]:
+        ls=[]
+        rs=[]
+        for j in range(len(nums)):
+            ls.append(sum(nums[:j]))
+            rs.append(sum(nums[j+1:]))
+        tamil=[]
+        for j in range(len(ls)):
+            tamil.append(abs(ls[j]-rs[j]))
+        return tamil
+        
