@@ -1,0 +1,5 @@
+class Solution:
+    def numberOfEmployeesWhoMetTarget(self, hours: List[int], target: int) -> int:
+        tamil=[j for j in hours if j>=target]
+        return len(tamil)
+        
