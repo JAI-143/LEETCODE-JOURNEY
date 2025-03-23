@@ -1,0 +1,6 @@
+class Solution:
+    def buildArray(self, nums: List[int]) -> List[int]:
+        l=[]
+        for j in range(len(nums)):
+            l.append(nums[nums[j]])
+        return (l)
