@@ -1,0 +1,13 @@
+class Solution:
+    def pivotArray(self, nums: List[int], pivot: int) -> List[int]:
+        tamil1,tamil2=[],[]
+        for j in nums:
+            if j<pivot:
+                tamil1.append(j)
+            elif j>pivot:
+                tamil2.append(j)
+            else:
+                tamil2.insert(0,j)
+        return tamil1+tamil2
+
+        
