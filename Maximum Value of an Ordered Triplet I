@@ -1,0 +1,13 @@
+from itertools import combinations as comp
+class Solution:
+    def maximumTripletValue(self, nums: List[int]) -> int:
+        tamil=[]
+        for j in comp(nums,3):
+            k=(j[0]-j[1])*j[2]
+            if k>0:
+
+                tamil.append(k)
+        if tamil:
+            return max(tamil)
+        return 0
+        
