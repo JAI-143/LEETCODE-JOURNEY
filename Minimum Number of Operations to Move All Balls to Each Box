@@ -1,0 +1,17 @@
+class Solution:
+    def minOperations(self, b: str) -> List[int]:
+        lin=[]
+
+        for j in range(len(b)):
+            lp=0
+            l1=b[:j][::-1]
+            l2=b[j+1:]
+            for h in range(len(l1)):
+                if l1[h]=="1":
+                    lp+=(h+1)
+            for f in range(len(l2)):
+                if l2[f]=="1":
+                    lp+=(f+1)
+            lin.append(lp)
+        return lin
+        
