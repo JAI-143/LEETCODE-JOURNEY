@@ -1,0 +1,18 @@
+from itertools import combinations as comp
+from collections import defaultdict as df
+class Solution:
+    def minimumAbsDifference(self, arr: List[int]) -> List[List[int]]:
+        arr.sort()
+        k=10**30
+        tamil=df()
+        for j in range(len(arr)-1):
+            l=abs(arr[j]-arr[j+1])
+            k=min(k,l)
+            if l not in tamil:
+                tamil[l]=[(arr[j],arr[j+1])]
+            else:
+                tamil[l].append((arr[j],arr[j+1]))
+        return tamil[k]
+
+
+        
