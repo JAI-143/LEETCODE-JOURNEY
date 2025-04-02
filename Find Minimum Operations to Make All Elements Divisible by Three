@@ -1,0 +1,8 @@
+class Solution:
+    def minimumOperations(self, nums: List[int]) -> int:
+        tamil=0
+        for j in nums:
+            if j%3!=0:
+                tamil+=1
+        return tamil
+        
