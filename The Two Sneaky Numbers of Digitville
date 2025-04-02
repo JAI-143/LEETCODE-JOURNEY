@@ -1,0 +1,4 @@
+class Solution:
+    def getSneakyNumbers(self, nums: List[int]) -> List[int]:
+        tamil=[j for j in set(nums) if nums.count(j)==2]
+        return tamil
