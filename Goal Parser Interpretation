@@ -1,0 +1,12 @@
+class Solution:
+    def interpret(self, command: str) -> str:
+        tamil=[]
+        for j in range(len(command)-1):
+            if command[j]!="(" and command[j]!=")":
+                tamil.append(command[j])
+            elif command[j]=="(" and command[j+1]==")":
+                tamil.append("o")
+        if command[-1]!=")":
+            tamil.append(command[-1])
+        return "".join(tamil)
+        
