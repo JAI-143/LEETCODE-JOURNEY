@@ -1,0 +1,12 @@
+class Solution:
+    def minOperations(self, nums: List[int], k: int) -> int:
+        kp=[j for j in set(nums) if j<k]
+        if kp:
+            return -1
+        lp=[j for j in set(nums) if j>=k]
+        if lp:
+
+            lop=[j for j in lp if j>k]
+            if lop:
+                return len(lop)
+            return 0
