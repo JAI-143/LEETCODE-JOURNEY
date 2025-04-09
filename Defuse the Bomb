@@ -1,0 +1,28 @@
+class Solution:
+    def decrypt(self, code: List[int], k: int) -> List[int]:
+        if k>0:
+            lp=[]
+            c=code+code
+            for j in range(len(code)):
+                lp.append(sum(c[j+1:k+j+1]))
+            return lp
+        elif k==0:
+            lp=[]
+            for  j in range(len(code)):
+                lp.append(0)
+            return lp
+        else:
+            lp=[]
+            c=code*2
+            ji=len(code)
+            for j in range(len(code)):
+                lp.append(sum(c[ji+k:ji]))
+                ji+=1
+            return lp
+
+
+
+
+            
+
+        
