@@ -1,0 +1,7 @@
+class Solution:
+    def nextGreatestLetter(self, le: List[str], ta: str) -> str:
+        k=[j for j in le if j>ta]
+        if k:
+            return min(k)
+        return le[0]
+        
