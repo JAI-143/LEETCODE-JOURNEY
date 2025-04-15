@@ -1,0 +1,30 @@
+from itertools import product as p
+class Solution:
+    def letterCombinations(self, digits: str) -> List[str]:
+        tamil=[]
+        k={2: ['a', 'b', 'c'], 3: ['d', 'e', 'f'], 4: ['g', 'h', 'i'], 5: ['j', 'k', 'l'], 6: ['m', 'n', 'o'], 7: ['p', 'q', 'r','s'], 8: ['t', 'u', 'v'], 9: ['w', 'x','y','z']}
+        jk=[]
+        if len(digits)==0:
+            return []
+        elif len(digits)==1:
+            return k[int(digits)]
+        elif len(digits)==2:
+            for j in p(k[int(digits[0])],k[int(digits[1])]):
+                jk.append("".join(j))
+        elif len(digits)==3:
+            for j in p(k[int(digits[0])],k[int(digits[1])],k[int(digits[2])]):
+                jk.append("".join(j))
+        elif len(digits)==4:
+            for j in p(k[int(digits[0])],k[int(digits[1])],k[int(digits[2])],k[int(digits[3])]):
+                jk.append("".join(j))
+        return jk
+
+        
+
+            
+
+
+
+
+
+        
