@@ -1,0 +1,14 @@
+class Solution:
+    def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        kop=head
+        k=[]
+        while kop:
+            k.append(kop.val)
+            kop=kop.next
+        kipi=0
+        while head:
+            if kipi==(len(k)//2):
+                return head
+            kipi+=1
+            head=head.next
+
