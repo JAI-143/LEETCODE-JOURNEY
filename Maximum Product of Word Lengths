@@ -1,0 +1,15 @@
+class Solution:
+    def maxProduct(self, words: List[str]) -> int:
+        tamil=[]
+        for j in range(len(words)):
+            for k in range(j+1,len(words)):
+                gi=0
+                for g in set(words[j]):
+                    if g in words[k]:
+                        gi+=1
+                        break
+                if not gi:
+                    tamil.append(len(words[j])*len(words[k]))
+        if tamil:
+            return max(tamil)
+        return 0
