@@ -1,0 +1,9 @@
+
+
+class Solution:
+    def maximumProduct(self, nums: List[int]) -> int:
+        np=sorted(nums)
+
+        lop=np[0]*np[1]*np[-1]
+        kop=np[-1]*np[-2]*np[-3]
+        return max(lop,kop)
