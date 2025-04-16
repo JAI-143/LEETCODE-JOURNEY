@@ -1,0 +1,11 @@
+class Solution:
+    def numberOfChild(self, n: int, k: int) -> int:
+        ko=[j for j in range(n)]
+        kp=ko[:-1][::-1]
+        kop=ko[1:]
+        lop=ko+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop+kp+kop
+
+
+        return lop[k]
+        
+        
