@@ -1,0 +1,19 @@
+class Solution:
+    def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        tamil=[]
+        for j in range(len(nums1)):
+            if nums1[j] in nums2:
+                    lp=nums2.index(nums1[j])
+                    lip=nums2[nums2.index(nums1[j])]
+                    lop=0
+                    for j in nums2[lp:]:
+                        if j>lip:
+                            tamil.append(j)
+                            lop+=1
+                            break
+                    if not lop:
+                        tamil.append(-1)
+        return tamil
+
+
+        
