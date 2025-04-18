@@ -1,0 +1,13 @@
+class Solution:
+    def shortestPalindrome(self, s: str) -> str:
+        k=len(s)-1
+        while s!=s[::-1]:
+            lp=s[k:][::-1]+s
+            if lp==lp[::-1]:
+                s=lp
+            else:
+                k-=1
+        return "".join(s)
+
+
+        
