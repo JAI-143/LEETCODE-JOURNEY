@@ -1,0 +1,13 @@
+class Solution:
+    def findThePrefixCommonArray(self, A: List[int], B: List[int]) -> List[int]:
+        laddu=[]
+        for j in range(len(A)):
+            beem=0
+            l=A[:j+1]
+            k=B[:j+1]
+            for g in l:
+                if g in k:
+                    beem+=1
+            laddu.append(beem)
+        return laddu
+        
