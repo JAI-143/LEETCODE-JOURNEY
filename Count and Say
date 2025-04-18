@@ -1,0 +1,22 @@
+class Solution:
+    def countAndSay(self, n: int) -> str:
+        s="1"
+        t=""
+        for j in range(1,n):
+            l=s[0]
+            f=0
+            c=0
+            while f<len(s):
+                while s[f]==l:
+                    c+=1
+                    if f<len(s):
+                        f+=1
+                    if f>=len(s):
+                        break
+                t+=(str(c)+str(l))
+                if f<len(s):
+                    l=s[f]
+                    c=0
+            s=t
+            t=""
+        return str(s)
