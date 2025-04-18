@@ -1,0 +1,18 @@
+class Solution:
+    def largestLocal(self, grid: List[List[int]]) -> List[List[int]]:
+        tamil=[[] for j in range(len(grid)-2)]
+        t=[]
+        s,e=3,3
+        for h in range(len(tamil)):
+            for g in range(len(tamil)):
+
+                for j in range(h,s):
+                    for k in range(g,e):
+                        t.append(grid[j][k])
+                tamil[h].append(max(t))
+                t=[]
+                e+=1
+            s+=1
+            e=3
+        return (tamil)
+        
