@@ -1,0 +1,22 @@
+class Solution:
+    def groupThePeople(self, gr: List[int]) -> List[List[int]]:
+        maanga=[]
+        matti={}
+        for j in range(len(gr)):
+            if gr[j] not in matti:
+                matti[gr[j]]=[j]
+            else:
+                matti[gr[j]].append(j)
+        for j in matti.keys():
+            poovu=[]
+            for k in range(len(matti[j])//j):
+                poovu.append(matti[j][:j])
+                matti[j]=matti[j][j:]
+            for ji in poovu:
+
+                maanga.append(ji)
+        return (maanga)
+
+                
+
+        
