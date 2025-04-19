@@ -1,0 +1,11 @@
+class Solution:
+    def findMatrix(self, nums: List[int]) -> List[List[int]]:
+        m=[]
+        warren=nums[:]
+        while warren:
+            kop=set(warren)
+            m.append(list(kop))
+            for j in kop:
+                warren.remove(j)
+        return (m)
+        
