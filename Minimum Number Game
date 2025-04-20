@@ -1,0 +1,18 @@
+class Solution:
+    def numberGame(self, nums: List[int]) -> List[int]:
+        tamil=[]
+        while nums:
+            if len(nums)>=2:
+                k=min(nums)
+                nums.remove(k)
+                l=min(nums)
+                nums.remove(l)
+                tamil.append(l)
+                tamil.append(k)
+            elif len(nums)==1:
+                lop=min(nums)
+                nums.remove(lop)
+                tamil.append(lop)
+        return tamil
+
+        
