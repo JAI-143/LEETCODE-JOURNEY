@@ -1,0 +1,35 @@
+class Solution:
+    def numRabbits(self, answers: List[int]) -> int:
+        tamil=0
+        l={}
+        for j in answers:
+            if j not in l:
+                l[j]=[j]
+            else:
+                l[j].append(j)
+        for j in l.keys():
+            
+            if j==0:
+                tamil+=(len(l[j]))
+            else:
+
+                kp=len(l[j])
+                if kp>j+1:
+                    kop=len(l[j])%(j+1)
+                    lop=len(l[j])//(j+1)
+                    tamil+=(lop*(j+1))
+                    if kop>j+1:
+                        kip=kop%(j+1)
+                        lip=lop//(j+1)
+                        tamil+=(lip*(j+1))
+
+                        tamil+=(kip*(j+1))
+                    elif kop:
+                        tamil+=(j+1)
+                else:
+                    tamil+=(j+1)
+        return tamil
+                
+        
+
+
