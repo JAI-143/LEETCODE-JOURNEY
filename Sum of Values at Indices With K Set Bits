@@ -1,0 +1,11 @@
+class Solution:
+    def sumIndicesWithKSetBits(self, nums: List[int], k: int) -> int:
+        tamil=0
+        for j in range(len(nums)):
+            kp=str(bin(j)).count("1")
+            if kp==k:
+                tamil+=nums[j]
+        return tamil
+
+
+        
