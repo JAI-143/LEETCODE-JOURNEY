@@ -1,0 +1,32 @@
+import copy
+class Solution:
+    def gameOfLife(self, b: List[List[int]]) -> None:
+        bi=copy.deepcopy(b)
+        for j in range(len(b)):
+            for k in range(len(b[j])):
+                l=[[j-1,k-1],[j-1,k],[j-1,k+1],[j,k-1],[j,k+1],[j+1,k-1],[j+1,k],[j+1,k+1]]
+                lp=[i for i in l if len(b[j])>i[1]>=0 and len(b)>i[0]>=0 ]
+                i=0
+                print(lp)
+                for o in lp:
+                    try:
+
+                        if bi[o[0]][o[1]]==1:
+                            i+=1
+                    except:
+                        continue
+                if i<2 and bi[j][k]==1:
+                    b[j][k]=0
+                elif i>3 and bi[j][k]==1:
+                    b[j][k]=0
+                elif i==3 and bi[j][k]==0:
+                    b[j][k]=1
+                
+
+
+                        
+
+
+
+
+        
