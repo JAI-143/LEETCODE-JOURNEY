@@ -1,0 +1,23 @@
+class Solution:
+    def countMatches(self, items: List[List[str]], ru: str, ra: str) -> int:
+
+        if ru=="type":
+            tamil=0
+            for j in items:
+                if j[0]==ra:
+                    tamil+=1
+            return tamil
+        elif ru=="color":
+            tamil=0
+            for j in items:
+                if j[1]==ra:
+                    tamil+=1
+            return tamil
+        elif ru=="name":
+            tamil=0
+            for j in items:
+                if j[2]==ra:
+                    tamil+=1
+            return tamil
+
+        
