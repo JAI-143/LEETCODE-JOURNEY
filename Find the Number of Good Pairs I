@@ -1,0 +1,9 @@
+class Solution:
+    def numberOfPairs(self, nums1: List[int], nums2: List[int], k: int) -> int:
+        tamil=0
+        for j in nums1:
+            for l in nums2:
+                if j%(l*k)==0:
+                    tamil+=1
+        return tamil
+        
