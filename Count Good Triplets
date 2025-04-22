@@ -1,0 +1,11 @@
+from itertools import combinations as com
+class Solution:
+    def countGoodTriplets(self, arr: List[int], a: int, b: int, c: int) -> int:
+        tamil=0
+        for j in com(arr,3):
+            if abs(j[0] - j[1])<= a and abs(j[1] - j[2]) <= b and abs(j[0] - j[2]) <= c:
+                tamil+=1
+        return tamil
+
+
+                    
