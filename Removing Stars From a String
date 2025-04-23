@@ -1,0 +1,12 @@
+class Solution:
+    def removeStars(self, s: str) -> str:
+        l=[]
+        for j in s:
+            if j!="*":
+                l.append(j)
+            else:
+                l.pop()
+        return "".join(l)
+            
+
+        
