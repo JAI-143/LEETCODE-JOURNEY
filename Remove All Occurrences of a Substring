@@ -1,0 +1,10 @@
+class Solution:
+    def removeOccurrences(self, s: str, part: str) -> str:
+        k=list(s)
+        while part in s:
+            for j in range(s.index(part),len(part)+s.index(part)):
+                k.pop(s.index(part))
+            s="".join(k)
+        return (s)
+
+        
