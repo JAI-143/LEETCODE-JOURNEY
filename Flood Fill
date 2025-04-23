@@ -1,0 +1,24 @@
+class Solution:
+    def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
+        i=image[sr][sc]
+        image[sr][sc]=color
+        t=True
+        ko=[[sr,sc]]
+        while t:
+            t=False
+            for j,k in ko:
+
+                lp=[[j-1,k],[j,k-1],[j+1,k],[j,k+1]]
+                lop=[k for k in lp if len(image)>k[0]>=0 and len(image[0])>k[1]>=0]
+                if image[j][k]==color:
+                    for h in lop:
+                        if image[h[0]][h[1]]!=color and image[h[0]][h[1]]==i:
+                            image[h[0]][h[1]]=color
+                            ko.append([h[0],h[1]])
+                            t=True
+        return image
+                            
+
+
+
+        
