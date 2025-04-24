@@ -1,0 +1,17 @@
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        if len(str(n))==1:
+            n=n**2
+        i=[]
+        l=list(str(n))
+        while "".join(l)!="1":
+            k=list(map(int,l))
+            kp=[j**2 for j in k]
+            kop=list(map(str,list(str(sum(kp)))))
+            l=kop
+            if sum(kp) in i:
+                return False
+            i.append(sum(kp))
+        return True
+
+        
