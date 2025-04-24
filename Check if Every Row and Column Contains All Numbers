@@ -1,0 +1,18 @@
+class Solution:
+    def checkValid(self, m: List[List[int]]) -> bool:
+                
+            r,c=[],[]
+            for j in range(len(m)):
+                for k in range(len(m)):
+                    r.append(m[j][k])
+                    c.append(m[k][j])
+                if len(set(r))!=len(r) or len(set(c))!=len(c):
+                    return False
+                r,c=[],[]
+                
+
+            return True
+
+
+
+        
