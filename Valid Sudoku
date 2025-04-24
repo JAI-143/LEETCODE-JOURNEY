@@ -1,0 +1,32 @@
+class Solution:
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
+        a,b=0,0
+        for j in range(len(board)):
+            r=[]
+            c=[]
+            dabba=[]
+            for k in range(len(board)):
+                if board[j][k].isnumeric():
+
+                    r.append(board[j][k])
+                if board[k][j].isnumeric():
+                    c.append(board[k][j])
+            for t in range(a,a+3):
+                for h in range(b,b+3):
+                    if board[t][h].isnumeric():
+
+                        dabba.append(board[t][h])
+            if b<6:
+                b+=3
+            else:
+                b=0
+                a+=3
+            if len(set(r))!=len(r) or len(set(c))!=len(c) or len(set(dabba))!=len(dabba):
+                return False
+        return True
+
+
+
+
+
+        
