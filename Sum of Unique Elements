@@ -1,0 +1,4 @@
+class Solution:
+    def sumOfUnique(self, nums: List[int]) -> int:
+        r=[j for j in nums if nums.count(j)==1]
+        return sum(r)
