@@ -1,0 +1,12 @@
+class Solution:
+    def countSubarrays(self, nums: List[int]) -> int:
+        tamil=0
+        f,l=0,3
+        while f<=len(nums)-3:
+            i=nums[f:l]
+            if i[0]+i[-1]==i[1]/2:
+                tamil+=1
+            f+=1
+            l+=1
+        return tamil
+        
