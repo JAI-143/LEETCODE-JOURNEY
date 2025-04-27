@@ -1,0 +1,12 @@
+class Solution:
+    def differenceOfSum(self, nums: List[int]) -> int:
+        n=list(map(str,nums))
+        tamil=0
+        for j in "".join(n):
+            tamil+=int(j)
+        dabba=0
+        for k in nums:
+            dabba+=k
+        return abs(dabba-tamil)
+
+        
