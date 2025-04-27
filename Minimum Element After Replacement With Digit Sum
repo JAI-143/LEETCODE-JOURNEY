@@ -1,0 +1,12 @@
+class Solution:
+    def minElement(self, nums: List[int]) -> int:
+        dabba=[]
+        for j in nums:
+            k=str(j)
+            l=0
+            for m in k:
+                l+=int(m)
+            dabba.append(l)
+        return min(dabba)
+            
+        
