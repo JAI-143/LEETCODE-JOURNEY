@@ -1,0 +1,12 @@
+class Solution:
+    def minimumAverage(self, nums: List[int]) -> float:
+        dabba=[]
+        for j in range(len(nums)//2):
+            i=min(nums)
+            k=max(nums)
+            dabba.append((i+k)/2)
+            nums.remove(i)
+            nums.remove(k)
+        return min(dabba)
+
+        
