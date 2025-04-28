@@ -1,0 +1,14 @@
+class Solution:
+    def sortTheStudents(self, score: List[List[int]], k: int) -> List[List[int]]:
+        dabba=[]
+        for j in range(len(score)):
+            dabba.append(score[j][k])
+        dabba.sort(reverse=True)
+        vidai=[]
+        for j in dabba:
+            for k in score:
+                if j in k:
+                    vidai.append(k)
+        return (vidai)
+
+        
