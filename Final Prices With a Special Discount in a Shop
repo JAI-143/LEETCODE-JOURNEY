@@ -1,0 +1,16 @@
+class Solution:
+    def finalPrices(self, prices: List[int]) -> List[int]:
+        dabba=[]
+        for j in range(len(prices)):
+            k=prices[j+1:]
+            c=0
+            for h in k:
+                if prices[j]>=h:
+                    dabba.append(prices[j]-h)
+                    c+=1
+                    break
+            if not c:
+                dabba.append(prices[j])
+            c=0
+        return (dabba)
+            
