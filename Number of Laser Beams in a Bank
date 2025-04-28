@@ -1,0 +1,24 @@
+class Solution:
+    def numberOfBeams(self, bank: List[str]) -> int:
+        ennikkai=0
+        k,l=0,1
+        while l<len(bank):
+            # print(ennikkai,k,l)
+            if (bank[l].count("1"))>0:
+                ennikkai+=((bank[k].count("1"))*(bank[l].count("1")))
+                if k<len(bank)-2 and l<len(bank)-1:
+
+                    k=(l)
+                    l+=1
+                elif k<len(bank)-2 and l==len(bank)-1:
+                    k+=1
+                else:
+                    break
+                
+            else:
+                l+=1
+                
+
+        return ennikkai
+
+        
