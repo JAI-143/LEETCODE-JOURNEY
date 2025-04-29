@@ -1,0 +1,11 @@
+class Solution:
+    def replaceWords(self, dic: List[str], sen: str) -> str:
+        sen=sen.split()
+        for j in dic:
+            for k in range(len(sen)):
+                if len(sen[k])>=len(j):
+                    if sen[k][:len(j)]==j:
+                        sen[k]=j
+        return " ".join(sen)
+
+        
