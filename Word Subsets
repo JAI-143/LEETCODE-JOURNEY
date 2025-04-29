@@ -1,0 +1,22 @@
+class Solution:
+    def wordSubsets(self, words1: List[str], words2: List[str]) -> List[str]:
+        dabba=[]
+        potti={}
+        for j in words2:
+            for k in j:
+                if k not in potti:
+                    potti[k]=j.count(k)
+                else:
+                    if potti[k]<j.count(k):
+                        potti[k]=j.count(k)
+        for j in words1:
+            e=0
+            for k in potti.keys():
+                if k not in j:
+                    break
+                elif j.count(k)>=potti[k]:
+                    e+=1
+            if e==len(list(potti.values())):
+                dabba.append(j)
+        return (dabba)
+
