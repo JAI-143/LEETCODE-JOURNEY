@@ -1,0 +1,17 @@
+class Solution:
+    def countPoints(self, points: List[List[int]], queries: List[List[int]]) -> List[int]:
+        jacky=[]
+        beema=0
+        for j in queries:
+            for k in points:
+                if (((abs(k[0]-j[0]))**2 )+(abs((k[1]-j[1]))**2))<=j[2]**2:
+                    beema+=1
+            jacky.append(beema)
+            beema=0
+        return (jacky)
+                    
+
+            
+
+
+        
