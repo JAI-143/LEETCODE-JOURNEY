@@ -1,0 +1,18 @@
+class Solution:
+    def countCharacters(self, words: List[str], chars: str) -> int:
+        ch=list(chars)
+        dabba=[]
+        for j in words:
+            c=0
+            for k in j:
+                if k not in ch:
+                    break
+                else:
+                    c+=1
+                    ch.remove(k)
+            if c==len(j):
+                dabba.append(j)
+            ch=list(chars)
+        return len("".join(dabba))
+            
+        
