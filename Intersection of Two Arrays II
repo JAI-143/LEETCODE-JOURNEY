@@ -1,0 +1,10 @@
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        dabba=[]
+        for j in range(len(nums1)):
+            if nums1[j] in nums2:
+                dabba.append(nums1[j])
+                nums2.remove(nums1[j])
+        return (dabba)
+        
+        
