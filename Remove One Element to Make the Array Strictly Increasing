@@ -1,0 +1,23 @@
+class Solution:
+    def canBeIncreasing(self, nums: List[int]) -> bool:
+        c=0
+        m=nums[:]
+        for j in range(len(nums)):
+            m.pop(j)
+            r=0
+            for k in range(len(m)-1):
+                if m[k]<m[k+1]:
+                    r+=1
+                
+            if r==len(m)-1:
+            
+                return True
+            m=nums[:]
+        return False
+
+
+
+
+
+
+        
