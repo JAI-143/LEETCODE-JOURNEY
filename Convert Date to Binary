@@ -1,0 +1,5 @@
+class Solution:
+    def convertDateToBinary(self, date: str) -> str:
+        l=date.split("-")
+        return f"{int(l[0]):b}-{int(l[1]):b}-{int(l[2]):b}"
+        
