@@ -1,0 +1,9 @@
+class Solution:
+    def findPermutationDifference(self, s: str, t: str) -> int:
+        e=0
+        for j in s:
+            e+=(abs(s.index(j)-t.index(j)))
+        return e
+
+
+        
