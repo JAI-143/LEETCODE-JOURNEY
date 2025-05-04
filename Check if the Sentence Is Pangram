@@ -1,0 +1,8 @@
+class Solution:
+    def checkIfPangram(self, sentence: str) -> bool:
+        k=[chr(j) for j in range(ord("a"),ord("z")+1)]
+        for j in k:
+            if j not in sentence:
+                return False
+        return True
+        
