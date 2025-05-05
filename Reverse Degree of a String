@@ -1,0 +1,10 @@
+class Solution:
+    def reverseDegree(self, s: str) -> int:
+        k=[chr(j) for j in range(ord("a"),ord("z")+1)]
+        k=k[::-1]
+        vidai=0
+        for j in range(1,len(s)+1):
+            vidai+=(((k.index(s[j-1])+1)*j))
+        return vidai
+
+        
