@@ -1,0 +1,11 @@
+class Solution:
+    def maxDepth(self, s: str) -> int:
+        t=0
+        vidai=0
+        for j in s:
+            if j=="(":
+                t+=1
+            elif j==")":
+                vidai=max(vidai,t)
+                t-=1
+        return vidai
