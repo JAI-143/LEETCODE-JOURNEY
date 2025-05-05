@@ -1,0 +1,14 @@
+class Solution:
+    def cellsInRange(self, s: str) -> List[str]:
+        dabba=[]
+        k=[chr(j) for j in range(ord("A"),ord("Z")+1)]
+        l1=int(s[1])
+        l=int(s[4])
+        for j in range(k.index(s[0]),k.index(s[3])+1):
+            for o in range(l1,l+1):
+                dabba.append("{}{}".format(k[j],o))
+        return dabba
+
+
+    
+        
