@@ -1,0 +1,18 @@
+class Solution:
+    def decodeMessage(self, key: str, message: str) -> str:
+        l=[]
+        for j in key:
+            if j not in l and j!=" ":
+                l.append(j)
+        h=[chr(k) for k in range(ord("a"),ord("z")+1)]
+
+        vidai=[]
+        for j in message:
+            if j in h:
+
+                vidai.append(h[l.index(j)])
+            else:
+                vidai.append(j)
+        return "".join(vidai)
+
+        
