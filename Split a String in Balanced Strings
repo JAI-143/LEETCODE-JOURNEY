@@ -1,0 +1,16 @@
+class Solution:
+    def balancedStringSplit(self, s: str) -> int:
+        l=0
+        vidai=0
+        for j in s:
+            if j=="L":
+                l+=1
+            else:
+                l-=1
+            if l==0:
+                vidai+=1
+        return vidai
+            
+
+
+        
