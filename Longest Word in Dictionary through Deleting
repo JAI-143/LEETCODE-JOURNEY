@@ -1,0 +1,25 @@
+class Solution:
+    def findLongestWord(self, s: str, dictionary: List[str]) -> str:
+        s=list(s)
+        dabba=[]
+        for j in dictionary:
+            sk=list(s)
+            v=0
+            for k in j:
+                if k not in sk:
+                    break
+                else:
+                    v+=1
+                    sk=sk[sk.index(k)+1:]
+            if v==len(j):
+                dabba.append(j)
+        dabba.sort()
+        print(dabba)
+        potti=[len(j) for j in dabba]
+        try :
+                
+            k=max(potti)
+            return dabba[potti.index(k)]
+        except:
+            return ""
+            
