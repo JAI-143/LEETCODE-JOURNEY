@@ -1,0 +1,19 @@
+class Solution:
+    def uniqueMorseRepresentations(self, words: List[str]) -> int:
+        kp=[".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+        lp=[chr(j) for j in range(ord("a"),ord("z")+1)]
+        potti={}
+        for j in range(26):
+            potti[lp[j]]=kp[j]
+        dabba=[]
+        for j in words:
+            wo=""
+            for k in j:
+                wo+=potti[k]
+            if wo not in dabba:
+
+                dabba.append(wo)
+        return len(dabba)
+        
+
+        
