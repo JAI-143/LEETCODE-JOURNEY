@@ -1,0 +1,9 @@
+class Solution:
+    def isPrefixString(self, s: str, words: List[str]) -> bool:
+        l=""
+        for j in words:
+            l+=j
+            if l==s:
+                return True 
+        return False
+        
