@@ -1,0 +1,10 @@
+class Solution:
+    def rearrangeArray(self, nums: List[int]) -> List[int]:
+        n=[j for j in nums if j<0]
+        p=[j for j in nums if j>0]
+        vidai=[]
+        for j in range(len(n)):
+            vidai.append(p[j])
+            vidai.append(n[j])
+        return vidai
+        
