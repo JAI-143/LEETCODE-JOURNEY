@@ -1,0 +1,12 @@
+class Solution:
+    def mergeArrays(self, nums1: List[List[int]], nums2: List[List[int]]) -> List[List[int]]:
+        dabba={}
+        for j in nums1+nums2:
+            if j[0] not in dabba:
+                dabba[j[0]]=j[1]
+            else:
+                dabba[j[0]]+=j[1]
+        vidai=[[j,dabba[j]] for j in dabba.keys()]
+        return sorted(vidai)
+
+        
