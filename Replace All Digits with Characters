@@ -1,0 +1,12 @@
+class Solution:
+    def replaceDigits(self, s: str) -> str:
+        l=[chr(j) for j in range(ord("a"),ord("z")+1)]
+        dabba=[]
+        for j in range(len(s)):
+            if s[j].isnumeric():
+                potti=l[l.index(s[j-1]):]
+                dabba.append(potti[int(s[j])])
+            else:
+                dabba.append(s[j])
+        return "".join(dabba) 
+        
