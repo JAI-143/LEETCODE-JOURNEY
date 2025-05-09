@@ -1,0 +1,5 @@
+class Solution:
+    def countSeniors(self, details: List[str]) -> int:
+        return len([int("".join([j[-4],j[-3]])) for j in details if int("".join([j[-4],j[-3]]))>60])
+
+        
