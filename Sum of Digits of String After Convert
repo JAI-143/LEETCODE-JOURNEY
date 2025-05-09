@@ -1,0 +1,21 @@
+class Solution:
+    def getLucky(self, s: str, k: int) -> int:
+        l=[chr(j) for j in range(ord("a"),ord("z")+1)]
+        dabba=[]
+        for j in s:
+            dabba.append(l.index(j)+1)
+        op=0
+        l=list(map(str,dabba))
+        l="".join(l)
+        l=list(map(int,l))
+        op+=(sum(l))
+        for p in range(k-1):
+            l=list(map(int,str(op)))
+            op=sum(l)
+        return (op)
+
+
+            
+
+
+        
