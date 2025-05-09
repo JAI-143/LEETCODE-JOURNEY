@@ -1,0 +1,8 @@
+class Solution:
+    def countAsterisks(self, s: str) -> int:
+        l=s.split("|")
+        e=0
+        for j in range(0,len(l),2):
+                e+=(l[j].count("*"))
+        return e
+        
