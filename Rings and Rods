@@ -1,0 +1,15 @@
+class Solution:
+    def countPoints(self, rings: str) -> int:
+        dabba={}
+        for j in range(0,len(rings),2):
+            if rings[j+1] not in dabba:
+                dabba[rings[j+1]]=[rings[j]]
+            else:
+                dabba[rings[j+1]].append(rings[j])
+        laddu=0
+        for k in dabba.keys():
+            if len(set(dabba[k]))==3:
+                laddu+=1
+        return laddu
+
+        
