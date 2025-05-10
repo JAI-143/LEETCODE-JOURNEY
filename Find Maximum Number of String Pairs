@@ -1,0 +1,10 @@
+class Solution:
+    def maximumNumberOfStringPairs(self, words: List[str]) -> int:
+        l=[sorted(j) for j in words]
+        dabba=[]
+        ennikkai=0
+        for j in l:
+            if j in dabba:
+                ennikkai+=1
+            dabba.append(j)
+        return ennikkai
