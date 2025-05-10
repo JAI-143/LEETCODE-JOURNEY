@@ -1,0 +1,12 @@
+class Solution:
+    def maximumOddBinaryNumber(self, s: str) -> str:
+        s=list(s)
+        summa=["0" for j in range(len(s))]
+        for j in range(s.count("1")-1):
+            summa[j]="1"
+        summa[-1]="1"
+        return "".join(summa)
+
+
+
+        
