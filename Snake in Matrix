@@ -1,0 +1,15 @@
+class Solution:
+    def finalPositionOfSnake(self, n: int, commands: List[str]) -> int:
+        potti=[j for j in range(n*n)]
+        laddu=0
+        for j in commands:
+            if j =="RIGHT":
+                laddu+=1
+            elif j=="LEFT":
+                laddu-=1
+            elif j=="DOWN":
+                laddu+=n
+            else:
+                laddu-=n
+        return potti[laddu]
+        
