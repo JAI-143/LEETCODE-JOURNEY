@@ -1,0 +1,22 @@
+class Solution:
+    def freqAlphabets(self, s: str) -> str:
+
+        k=[chr(j) for j in range(ord("a"),ord("z")+1)]
+        vidai=[]
+        l=0
+        while l<len(s):
+            if l<len(s)-2:
+                if s[l+2]=="#":
+                    kp="".join([s[l],s[l+1]])
+                    print(kp)
+                    vidai.append(k[int(kp)-1])
+                    l+=3
+                else:
+                    vidai.append(k[int(s[l])-1])
+                    l+=1
+            else:
+                vidai.append(k[int(s[l])-1])
+                l+=1
+        return "".join(vidai)
+
+        
