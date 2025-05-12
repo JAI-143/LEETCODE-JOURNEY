@@ -1,0 +1,9 @@
+class Solution:
+    def separateDigits(self, nums: List[int]) -> List[int]:
+        l=list(map(str,nums))
+        dabba=[]
+        for j in l:
+            for k in j:
+                dabba.append(int(k))
+        return dabba
+        
