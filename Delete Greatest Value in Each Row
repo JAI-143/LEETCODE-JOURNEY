@@ -1,0 +1,15 @@
+class Solution:
+    def deleteGreatestValue(self, grid: List[List[int]]) -> int:
+        vidai=0
+        while grid[0]:
+            summa=[]
+            for j in range(len(grid)):
+                m=max(grid[j])
+                summa.append(m)
+                grid[j].remove(m)
+            vidai+=max(summa)
+        return vidai
+            
+
+
+        
