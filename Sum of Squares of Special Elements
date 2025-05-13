@@ -1,0 +1,9 @@
+class Solution:
+    def sumOfSquares(self, nums: List[int]) -> int:
+        vidai=0
+        k=len(nums)
+        for j in range(1,len(nums)+1):
+            if k%j==0:
+                vidai+=(nums[j-1]**2)
+        return vidai
+        
