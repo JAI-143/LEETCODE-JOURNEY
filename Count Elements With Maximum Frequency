@@ -1,0 +1,12 @@
+class Solution:
+    def maxFrequencyElements(self, nums: List[int]) -> int:
+        k=Counter(nums)
+        lp=[j for j in k.values()]
+        ko=max(lp)
+        vidai=0
+        for j in k.keys():
+            if k[j]==ko:
+                vidai+=k[j]
+        return vidai
+
+        
