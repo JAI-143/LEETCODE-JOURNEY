@@ -1,0 +1,9 @@
+class Solution:
+    def removeTrailingZeros(self, num: str) -> str:
+        l=list(num)[::-1]
+        k=0
+        while l[k] =="0":
+            l.pop(0)
+        return "".join(l[::-1])
+
+        
