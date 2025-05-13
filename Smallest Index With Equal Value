@@ -1,0 +1,7 @@
+class Solution:
+    def smallestEqual(self, nums: List[int]) -> int:
+        for j in range(len(nums)):
+            if j%10==nums[j]:
+                return j
+        return -1
+        
