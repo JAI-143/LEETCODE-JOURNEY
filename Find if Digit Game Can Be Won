@@ -1,0 +1,15 @@
+class Solution:
+    def canAliceWin(self, nums: List[int]) -> bool:
+        return True if sum([j for j in nums if len(str(j))>1])!=sum([j for j in nums if len(str(j))==1]) else False
+
+
+
+
+
+
+
+
+
+
+
+        
