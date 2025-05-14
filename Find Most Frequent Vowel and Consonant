@@ -1,0 +1,19 @@
+class Solution:
+    def maxFreqSum(self, s: str) -> int:
+        vow=['a','e','i','o','u']
+        v=[j for j in s if j in vow]
+        c=[j for j in s if j not in vow]
+        v1=Counter(v)
+        c1=Counter(c)
+        v2=v1.values()
+        c2=c1.values()
+        try:
+            return max(v2)+max(c2)
+        except:
+            try:
+                return max(v2)+0
+            except:
+                return 0+max(c2)
+                
+        
+        
