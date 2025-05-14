@@ -1,0 +1,16 @@
+class Solution:
+    def minimumOperations(self, nums: List[int]) -> int:
+        l=0
+        while nums:
+            
+            if 0 in nums:
+                while 0 in nums:
+
+                    nums.remove(0)
+            else:
+
+                l+=1
+                k=min(nums)
+                for j in range(len(nums)):
+                    nums[j]=(nums[j]-k)
+        return l
