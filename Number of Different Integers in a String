@@ -1,0 +1,23 @@
+class Solution:
+    def numDifferentIntegers(self, word: str) -> int:
+        dabba=[]
+        l=0
+        while l<len(word):
+            summa=""
+            if word[l].isnumeric():
+                while word[l].isnumeric():
+                    summa+=word[l]
+                    if l<len(word)-1:
+
+                        l+=1
+                    else:
+                        l+=1
+                        break
+            else:
+                l+=1
+            if summa:
+
+                dabba.append(int(summa))
+        return len(set(dabba))
+
+        
