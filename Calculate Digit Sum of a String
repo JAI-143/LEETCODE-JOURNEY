@@ -1,0 +1,21 @@
+class Solution:
+    def digitSum(self, s: str, k: int) -> str:
+        while len(s)>k:
+            f,l=0,k
+            dabba=[]
+            for j in range((len(s)//k)+1):
+                dabba.append(s[f:l])
+                f+=k
+                l+=k
+            summa=""
+            for j in dabba:
+                ok=0
+                if j:
+
+                    for i in j:
+                        ok+=int(i)
+                    summa+=str(ok)
+            s=summa
+        return s
+                
+        
