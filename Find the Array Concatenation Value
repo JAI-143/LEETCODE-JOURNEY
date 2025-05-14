@@ -1,0 +1,17 @@
+class Solution:
+    def findTheArrayConcVal(self, nums: List[int]) -> int:
+        c=0
+        while nums:
+            if len(nums)>=2:
+                    
+                k=str(nums[0])+str(nums[-1])
+                c+=(int(k))
+                nums.pop(0)
+                nums.pop(-1)
+            else:
+                c+=nums[0]
+                nums.pop(0)
+        return c
+
+
+        
