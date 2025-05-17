@@ -1,0 +1,10 @@
+class Solution:
+    def finalString(self, s: str) -> str:
+        vidai=""
+        for j in s:
+            if j=="i":
+                vidai=vidai[::-1]
+            else:
+                vidai+=j
+        return vidai
+        
