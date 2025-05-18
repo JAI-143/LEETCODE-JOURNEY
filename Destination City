@@ -1,0 +1,9 @@
+class Solution:
+    def destCity(self, paths: List[List[str]]) -> str:
+        dabba={}
+        for j in paths:
+            dabba[j[0]]=j[1]
+        j=paths[0][0]
+        while j in dabba.keys():
+            j=dabba[j]
+        return j
