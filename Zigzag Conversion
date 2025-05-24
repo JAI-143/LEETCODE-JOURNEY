@@ -1,0 +1,32 @@
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        if numRows==1 or len(s)<=numRows:
+            return s
+        print(len(s))
+        vidai=[[] for j in range(numRows)]
+        l=0
+        k=0
+        for j in range(len(s)):
+            while l<numRows-1:
+                try:
+                    vidai[l].append(s[k])
+                except:
+                    break
+                l+=1
+                k+=1
+            while l!=0:
+                try:
+                    vidai[l].append(s[k])
+                except:
+                    break
+                l-=1
+                
+                k+=1
+            if l>=len(s):
+                break
+        dabba=[]
+        for j in vidai:
+            dabba+=j
+        return "".join(dabba)
+
+        
