@@ -1,0 +1,8 @@
+from itertools import combinations as comb
+class Solution:
+    def countPrefixSuffixPairs(self, words: List[str]) -> int:
+        ennikkai=0
+        for j,k in comb(words,2):
+            if j==k[:len(j)] and j==k[-(len(j)):]:
+                ennikkai+=1
+        return ennikkai
