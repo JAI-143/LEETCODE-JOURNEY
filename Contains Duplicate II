@@ -1,0 +1,16 @@
+class Solution:
+    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+        dabba={}
+        for j in range(len(nums)):
+            
+            if nums[j] not in dabba.keys():
+                dabba[nums[j]]=j
+            elif abs(dabba[nums[j]]-j)<=k:
+                return True
+            else:
+                dabba[nums[j]]=j
+        return False
+
+            
+
+
