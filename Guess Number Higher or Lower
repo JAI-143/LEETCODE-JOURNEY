@@ -1,0 +1,12 @@
+class Solution:
+    def guessNumber(self, n: int) -> int:
+        munnadi,pinnadi=1,n
+        while munnadi<=pinnadi:
+            naduvula=(munnadi+pinnadi)//2
+            vidai=guess(naduvula)
+            if vidai==0:
+                return naduvula
+            elif vidai==1:
+                munnadi=naduvula+1
+            else:
+                pinnadi=naduvula-1
