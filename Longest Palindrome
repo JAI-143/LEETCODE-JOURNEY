@@ -1,0 +1,18 @@
+class Solution:
+    def longestPalindrome(self, s: str) -> int:
+        dabba={}
+        if len(set(s))==1:
+            return len(s)
+        for j in s:
+            if j not in dabba:
+                dabba[j]=1
+            else:
+                dabba[j]+=1
+        vidai=0
+        k=True
+        for j in dabba.keys():
+            if dabba[j]%2==0:
+                vidai+=(dabba[j])
+            else:
+                vidai+=dabba[j]-1
+        return vidai+1 if vidai<len(s) else vidai
