@@ -1,0 +1,14 @@
+class Solution:
+    def luckyNumbers(self, matrix: List[List[int]]) -> List[int]:
+        dabba=[]
+        for j in matrix:
+            dabba.append(min(j))
+        vidai=[]
+
+        for j in range(len(matrix[0])):
+            m=0
+            for k in range(len(matrix)):
+                m=max(m,matrix[k][j])
+            if m in dabba:
+                vidai.append(m)
+        return vidai
