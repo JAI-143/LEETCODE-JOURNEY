@@ -1,0 +1,13 @@
+class Solution:
+    def countTestedDevices(self, bP: List[int]) -> int:
+        ennikkai=0
+        for j in range(len(bP)):
+            if bP[j]>0:
+                ennikkai+=1
+                for k in range(j+1,len(bP)):
+                    if bP[k]>0:
+                        bP[k]-=1
+        return ennikkai
+
+
+        
