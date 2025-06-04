@@ -1,0 +1,15 @@
+class Solution:
+    def fizzBuzz(self, n: int) -> List[str]:
+        dappi=[]
+        for j in range(1,n+1):
+            if j%3==0 and j%5==0:
+                dappi.append("FizzBuzz")
+            elif j%3==0:
+                dappi.append("Fizz")
+            elif j%5==0:
+                dappi.append("Buzz")
+            else:
+                dappi.append(str(j))
+        return dappi
+
+        
