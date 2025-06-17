@@ -1,0 +1,7 @@
+class Solution:
+    def findGCD(self, nums: List[int]) -> int:
+        k=min(nums)
+        l=max(nums)
+        for j in range(l,0,-1):
+            if k%j==0 and l%j==0:
+                return j
