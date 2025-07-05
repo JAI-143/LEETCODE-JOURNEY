@@ -1,0 +1,14 @@
+class Solution(object):
+    def strStr(self, haystack, needle):
+        # first=needle[0]
+        # n=len(haystack)
+        # m=len(needle)
+        # for i in range(n-m+1):
+        #     if haystack[i]==first and haystack[i:i+m]==needle:
+        #         return i
+        # else:
+        #     return -1
+        if needle in haystack:
+            return haystack.index(needle)
+        return -1
+                
