@@ -1,0 +1,13 @@
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        dabba=set()
+        l=[sorted(j) for j in strs]
+        for j in l:
+            potti=[]
+            for k in range(len(l)):
+                if j==l[k]:
+                    potti.append(strs[k])
+            dabba.add(tuple(potti))
+        return list(dabba)
+            
+        
