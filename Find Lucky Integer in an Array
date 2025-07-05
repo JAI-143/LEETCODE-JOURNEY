@@ -1,0 +1,11 @@
+class Solution:
+    def findLucky(self, arr: List[int]) -> int:
+        dabba=[]
+        k=Counter(arr)
+        for j in k.keys():
+            if k[j]==j:
+                dabba.append(j)
+        if dabba:
+            return max(dabba)
+        return -1
+        
