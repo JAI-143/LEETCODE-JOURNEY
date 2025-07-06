@@ -1,0 +1,20 @@
+class Solution:
+    def replaceElements(self, arr: List[int]) -> List[int]:
+        dabba=[]
+        s,e=1,len(arr)
+        lp=arr[s:e]
+        while s<len(arr):
+            if lp:
+                dabba.append(max(lp))
+            else:
+                dabba.append(-1)
+                break
+
+            lp.pop(0)
+            s+=1
+        dabba.append(-1)
+        return dabba
+
+
+
+        
