@@ -1,6 +1,36 @@
 class Solution:
     def replaceElements(self, arr: List[int]) -> List[int]:
         dabba=[]
+
+        k=arr[1:]
+        if k:
+            k=max(k)
+        for j in range(1,len(arr)):
+            if arr[j]!=k:
+                dabba.append(k)
+            else:
+                dabba.append(k)
+                lp=arr[j+1:]
+                if lp:
+
+                    k=max(lp)
+                else:
+                    break
+        dabba+=[-1]
+        return (dabba)
+
+
+
+        
+
+
+
+
+"""class Solution:
+    def replaceElements(self, arr: List[int]) -> List[int]:
+
+
+        dabba=[]
         s,e=1,len(arr)
         lp=arr[s:e]
         while s<len(arr):
@@ -13,7 +43,7 @@ class Solution:
             lp.pop(0)
             s+=1
         dabba.append(-1)
-        return dabba
+        return dabba"""
 
 
 
