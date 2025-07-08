@@ -1,0 +1,12 @@
+class Solution:
+    def reversePrefix(self, word: str, ch: str) -> str:
+        dabba=[]
+        l=True
+        for j in word:
+            if j==ch and l:
+                dabba.append(j)
+                dabba=dabba[::-1]
+                l=False
+            else:
+                dabba.append(j)
+        return "".join(dabba)
