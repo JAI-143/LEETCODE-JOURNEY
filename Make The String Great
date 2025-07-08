@@ -1,0 +1,24 @@
+class Solution:
+    def makeGood(self, s: str) -> str:
+        dabba=[]
+        n=0
+        for j in s:
+            if j.islower():
+                if dabba:
+                    if dabba[-1]==j.upper():
+                        dabba.pop()
+                    else:
+                        dabba.append(j)
+                else:
+                    dabba.append(j)
+            else:
+                if dabba:
+                    if dabba[-1]==j.lower():
+                        dabba.pop()
+                    else:
+                        dabba.append(j)
+                else:
+                    dabba.append(j)
+        return "".join(dabba)
+                    
+        
