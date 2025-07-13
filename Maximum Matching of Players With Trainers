@@ -1,0 +1,14 @@
+class Solution:
+    def matchPlayersAndTrainers(self, players: List[int], trainers: List[int]) -> int:
+        players.sort()
+        trainers.sort()
+        c=0
+        for j in players:
+            for k in range(len(trainers)):
+                if j<=trainers[k]:
+                    c+=1
+                    trainers.pop(k)
+                    break
+
+        return c
+        
