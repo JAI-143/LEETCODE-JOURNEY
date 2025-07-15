@@ -1,0 +1,21 @@
+class Solution:
+    def isValid(self, word: str) -> bool:
+        vow=["a","e","i","o","u"]
+        con=[chr(j) for j in range(ord("a"),ord("z")+1) if j not in vow]
+        if len(word)<3:
+            return False
+        dabba={"vo":[],"co":[],"nu":[]}
+        for j in word:
+            if j.isalpha() and j.lower() in vow:
+                dabba["vo"].append(j)
+            elif j.isalpha() and j.lower() in con:
+                dabba["co"].append(j)
+            elif j.isnumeric() :
+                dabba["nu"].append(j)
+            else:
+                return False
+        if not dabba["vo"] or not dabba["co"]:
+            return False
+        return True
+
+        
