@@ -1,0 +1,24 @@
+
+class Solution:
+    def removeSubfolders(self, folder: List[str]) -> List[str]:
+        folder.sort()
+        dabba={}
+        for j in folder:
+            if len(j)==2:
+                dabba[j]=[]
+            else:
+                lp=True
+                for k in dabba.keys():
+                    if k+"/" == j[:len(k)+1]:
+                        dabba[k].append(j)
+                        lp=False
+                        break
+                if lp:
+                    dabba[j]=[]
+        potti=[j for j in dabba.keys()]
+        return potti
+
+    
+
+
+        
