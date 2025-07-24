@@ -1,0 +1,25 @@
+class Solution:
+    def reformatNumber(self, number: str) -> str:
+        l=[j for j in number if j.isnumeric()]
+        dabba=[]
+        s,e=0,3
+        while len(l)>4:
+
+            dabba.append(l[0:3])
+            l=l[e:]
+        vidai=""
+        print(l)
+        if len(l)==4:
+            for j in dabba:
+                vidai+=("".join(j)+"-")
+            vidai+=("".join(l[0:2])+"-")
+            vidai+=("".join(l[2:]))
+
+        else:
+            for j in dabba:
+                vidai+=("".join(j)+"-")
+            vidai+="".join(l)
+        return vidai
+
+
+
