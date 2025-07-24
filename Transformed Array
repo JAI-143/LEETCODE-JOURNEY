@@ -1,0 +1,7 @@
+class Solution:
+    def constructTransformedArray(self, nums: List[int]) -> List[int]:
+        n=len(nums)
+        nu=nums*100
+        for j in range(len(nums)):
+            nums[j]=nu[(nums[j]+j)]
+        return nums
