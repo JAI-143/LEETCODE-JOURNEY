@@ -1,0 +1,11 @@
+class Solution:
+    def possibleStringCount(self, word: str) -> int:
+        ennikkai=0
+        l=0
+        while l<len(word)-1:
+            if word[l]==word[l+1]:
+                ennikkai+=1
+                l+=1
+            else:
+                l+=1
+        return ennikkai+1
