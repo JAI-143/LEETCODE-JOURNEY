@@ -1,0 +1,20 @@
+class Solution:
+    def countHillValley(self, nums: List[int]) -> int:
+        ennikkai=0
+        l=0
+        while l<len(nums)-1:
+            if nums[l]==nums[l+1]:
+                nums.pop(l)
+            else:
+                l+=1
+        for j in range(1,len(nums)-1):
+            if nums[j]>nums[j+1] and nums[j]>nums[j-1]:
+                ennikkai+=1
+            elif nums[j]<nums[j+1] and nums[j]<nums[j-1]:
+                ennikkai+=1
+        return ennikkai
+            
+
+
+            
+        
