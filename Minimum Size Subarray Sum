@@ -1,0 +1,17 @@
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        if sum(nums)<target:
+            return 0
+
+        pinnadi=0
+        summa=0
+        vidai=len(nums)
+        for munnadi in range(len(nums)):
+            summa+=nums[munnadi]
+            while summa>=target:
+                summa-=nums[pinnadi]
+                vidai=min(vidai,munnadi-pinnadi+1)
+                pinnadi+=1
+            
+        return vidai
+            
