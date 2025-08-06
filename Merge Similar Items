@@ -1,0 +1,22 @@
+class Solution:
+    def mergeSimilarItems(self, items1: List[List[int]], items2: List[List[int]]) -> List[List[int]]:
+        dabba=[]
+        for j in range(len(items1)):
+            lp=True
+            for k in range(len(items2)):
+                if items1[j][0]==items2[k][0]:
+                    dabba.append([items1[j][0],items1[j][1]+items2[k][1]])
+                    items2[k]="lol"
+                    lp=False
+                    break
+                    
+            if lp:
+                dabba.append(items1[j])
+        for k in items2:
+            if k!="lol":
+                dabba.append(k)
+        return sorted(dabba)
+
+
+
+        
