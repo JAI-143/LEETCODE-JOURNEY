@@ -1,0 +1,36 @@
+from itertools import permutations as per
+class Solution:
+    def reorderedPowerOf2(self, n: int) -> bool:
+
+        dabba={}
+        for k in per(str(n)):
+            lp=int("".join(k))
+            if k[0]!="0":
+                m=0
+                if lp==1:
+                    return True
+                if lp%2==0:
+                    lop=list(dabba.keys())
+                    if lp in lop:
+                        return True
+                    else:
+
+                        if lop:
+                            if lop[-1]<lp:
+                                m=dabba[lop[-1]]
+                            else:
+                                continue
+                        
+                        while m<=lp:
+                            dabba[2**m]=m
+                            if 2**m==lp:
+                                return True
+                            elif 2**m>lp:
+                                break
+                            m+=1
+        return False
+
+
+        
+
+        
