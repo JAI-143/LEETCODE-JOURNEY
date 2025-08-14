@@ -1,0 +1,29 @@
+import sys
+
+class Solution:
+    def largestOddNumber(self, num: str) -> str:
+        sys.set_int_max_str_digits(19000000)
+        if int(num)%2!=0:
+            return num
+        potti={}
+        l=0
+        lol=num[::-1]
+        for j in "97531":
+            if j not in num:
+                l+=1
+
+            else:
+                potti[lol.index(j)]=j
+
+        if l==5:
+            return ""
+        jp=min(potti)
+        return num[:-jp]
+        
+        return ""
+    
+
+
+
+        
+        
