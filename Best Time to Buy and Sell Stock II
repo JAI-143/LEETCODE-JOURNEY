@@ -6,7 +6,8 @@ class Solution:
             if b<prices[j]:
                 pro+=(prices[j]-b)
             b=prices[j]
-        return pro
+        return pro 
+#
 
 
             
