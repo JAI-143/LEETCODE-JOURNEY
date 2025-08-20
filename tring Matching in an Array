@@ -1,0 +1,9 @@
+class Solution:
+    def stringMatching(self, words: List[str]) -> List[str]:
+        ennikkai=set()
+        for j in words:
+            for k in words:
+                if j in k and k!=j:
+                    ennikkai.add(j)
+                    continue
+        return list(ennikkai)
