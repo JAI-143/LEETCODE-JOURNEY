@@ -1,0 +1,41 @@
+class Solution:
+    def longestSubarray(self, nums: List[int]) -> int:
+        vidai=0
+        summa=0
+        pulli=0
+        mutta=0
+        s,e=0,0
+        if 1 not in nums:
+            return 0
+        if len(set(nums))==1:
+            return len(nums)-1
+        while e<len(nums):
+            if nums[e]==1:
+                pulli+=1
+                e+=1
+            elif nums[e]==0 and summa<1:
+                mutta=e
+                summa+=1
+                e+=1
+            else:
+                vidai=max(vidai,pulli)
+                while summa==1 and s<=e:
+                    if nums[s]==0:
+                        s+=1
+                        summa-=1
+                    else:
+                        pulli-=1
+                        s+=1
+
+                        
+                    
+
+        vidai=max(vidai,pulli)
+        return vidai
+
+
+
+
+            
+
+        
