@@ -1,0 +1,26 @@
+class Solution:
+    def isPathCrossing(self, path: str) -> bool:
+        dabba=set()
+        dabba.add((0,0))
+        summa=[0,0]
+        for j in range(len(path)):
+            i=summa[:]
+            if path[j]=="N":
+                i[0]+=1
+            elif path[j]=="S":
+                i[0]-=1
+            elif path[j]=="E":
+                i[1]+=1
+            elif path[j]=="W":
+                i[1]-=1
+            if tuple(i) in dabba:
+                return True
+            else:
+                dabba.add(tuple(i))
+                summa=i[:]
+        return False
+            
+            
+            
+
+        
