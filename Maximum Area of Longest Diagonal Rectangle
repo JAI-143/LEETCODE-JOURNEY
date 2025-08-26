@@ -1,0 +1,16 @@
+from math import sqrt
+class Solution:
+    def areaOfMaxDiagonal(self, dimensions: List[List[int]]) -> int:
+        potti={}
+        for j in dimensions:
+            o=sqrt((j[0]**2)+(j[1]**2))
+            if o not in potti:
+
+                potti[o]=j
+            else:
+                potti[o]=max(potti[o],j)
+        r=potti[max(potti)]
+        return r[0]*r[1]
+
+
+        
