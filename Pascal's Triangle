@@ -1,0 +1,17 @@
+class Solution:
+    def generate(self, nm: int) -> List[List[int]]:
+        if nm ==1:
+            return [[1]]
+        if nm==2:
+            return [[1],[1,1]]
+        dabba=[[1],[1,1]]
+        for j in range(nm-2):
+            potti=[1]
+            for k in range(len(dabba[-1])-1):
+                potti.append(dabba[-1][k]+dabba[-1][k+1])
+            potti+=[1]
+            dabba.append(potti)
+        return dabba
+
+            
+        
