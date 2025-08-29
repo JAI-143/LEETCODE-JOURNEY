@@ -1,0 +1,7 @@
+class Solution:
+    def maximum69Number (self, num: int) -> int:
+        kp=list(str(num))
+        if "6" in kp:
+            kp[kp.index("6")]="9"
+        return int("".join(kp))
+        
