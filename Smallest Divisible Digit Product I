@@ -1,0 +1,10 @@
+class Solution:
+    def smallestNumber(self, n: int, t: int) -> int:
+        m=n
+        op=True
+        while op:
+            kp=list(map(int,str(m)))
+            if math.prod(kp)%t==0:
+                break
+            m=m+1
+        return m
