@@ -1,0 +1,11 @@
+
+class Solution:
+    def minOperations(self, logs: List[str]) -> int:
+        vidai=0
+        for j in logs:
+            if j=="../" and vidai:
+                vidai-=1
+            elif j!="./" and j!="../":
+                vidai+=1
+        return vidai
+        
