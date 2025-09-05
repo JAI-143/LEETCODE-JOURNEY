@@ -1,0 +1,10 @@
+class Solution:
+    def rowAndMaximumOnes(self, mat: List[List[int]]) -> List[int]:
+        dabba={}
+        for j in range(len(mat)):
+            k=mat[j].count(1)
+            if k not in dabba:
+                dabba[k]=j
+        return [dabba[max(dabba)],max(dabba)]
+
+        
