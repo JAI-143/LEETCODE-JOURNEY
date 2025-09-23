@@ -1,0 +1,23 @@
+class Solution:
+    def compareVersion(self, version1: str, version2: str) -> int:
+        version1=list(map(int,version1.split(".")[:]))
+        version2=list(map(int,version2.split(".")[:]))
+        vidai=0
+        while len(version2)<len(version1):
+            version2.append(0)
+        while len(version1)<len(version2):
+            version1.append(0)
+        for j in range(len(version1)):
+            try:
+                if version1[j]>version2[j]:
+                    vidai=1
+                    break
+                elif version1[j]<version2[j]:
+                    vidai=-1
+                    break
+            except:
+                continue
+        return vidai
+
+        
+        
