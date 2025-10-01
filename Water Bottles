@@ -1,0 +1,11 @@
+class Solution:
+    def numWaterBottles(self, numBottles: int, numExchange: int) -> int:
+        vidai=numBottles
+        r=numBottles
+        while r>=numExchange:
+            vidai+=(r//numExchange)
+            k=r
+            r=k//numExchange
+            r+=k%numExchange
+        return vidai
+        
