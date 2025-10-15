@@ -14,5 +14,6 @@ class Solution:
 
                     dappi[j]=dappi[j-1]+1
         return sum(dappi)
+#py3
         
         
