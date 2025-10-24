@@ -1,0 +1,10 @@
+class Solution:
+    def alternatingSum(self, nums: List[int]) -> int:
+        od=0
+        ev=0
+        for j in range(0,len(nums),2):
+            od+=nums[j]
+        for j in range(1,len(nums),2):
+            ev+=nums[j]
+        return od-ev
+        
