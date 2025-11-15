@@ -1,0 +1,9 @@
+class Solution:
+    def findMissingElements(self, nums: List[int]) -> List[int]:
+        dabba=[]
+        lp=min(nums);kp=max(nums)
+        for j in range(lp,kp+1):
+            if j not in nums:
+                dabba.append(j)
+        return dabba
+        
