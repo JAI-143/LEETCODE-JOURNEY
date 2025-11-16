@@ -1,0 +1,22 @@
+class Solution:
+    def numSub(self, s: str) -> int:
+        ennikkai=0
+        lp=0
+        kp=len(s)
+        while lp<kp:
+            summa=0
+            if s[lp]=="1":
+                while lp<kp and s[lp]=="1":
+                    summa+=1
+                    lp+=1
+                e=((summa*(summa+1))//2)
+                ennikkai+=e
+            
+            else:
+                lp+=1
+
+        return ennikkai%((10**9)+7)
+
+
+
+        
