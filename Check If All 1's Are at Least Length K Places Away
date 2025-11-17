@@ -1,0 +1,10 @@
+class Solution:
+    def kLengthApart(self, nums: List[int], k: int) -> bool:
+        dabba=[j for j in range(len(nums)) if nums[j]==1]
+        for j in range(len(dabba)-1):
+            if dabba[j+1]-dabba[j]<=k:
+                return False
+        return True
+
+
+        
