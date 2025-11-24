@@ -11,4 +11,22 @@ class Solution:
             else:
                 ans.append(False)
         return ans
-        
+
+
+
+_____________________________________________________________________________________________________
+
+class Solution:
+    def prefixesDivBy5(self, nums: List[int]) -> List[bool]:
+        dabba=[]
+        potti=""
+        for j in range(len(nums)):
+            potti+=str(nums[j])
+            if int(potti,2)%5==0:
+                dabba.append(True)
+            else:
+                dabba.append(False)
+        return dabba
+
+
+
