@@ -1,0 +1,20 @@
+class Solution:
+    def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
+        ip="!?',;."
+        for j in paragraph:
+            if j in ip:
+                paragraph=paragraph.replace(j, " ")
+        kp="".join(paragraph.lower())
+        
+        lp=kp.split(" ")
+        op=(Counter(lp))
+        if "" in op:
+            op.pop("")
+        for j in banned:
+            if j in op:
+
+                op.pop(j)
+        jp=max(op.values())
+        for j in op.keys():
+            if op[j]==jp:
+                return j
