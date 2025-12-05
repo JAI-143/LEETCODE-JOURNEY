@@ -5,3 +5,21 @@ class Solution:
             if abs((sum(nums[:j]))-(sum(nums[j:])))%2==0:
                 c+=1
         return c
+
+
+________________________________________________________________________________________________
+
+
+class Solution:
+    def countPartitions(self, nums: List[int]) -> int:
+        vidai=0
+        lp=0
+        kp=sum(nums)
+        for j in range(len(nums)-1):
+            lp+=nums[j]
+            kp-=nums[j]
+            if abs(lp-kp)%2==0:
+                vidai+=1
+        return vidai
+
+        
