@@ -1,0 +1,28 @@
+class Solution:
+    def getDescentPeriods(self, prices: List[int]) -> int:
+        op=len(prices)
+        if op<2:
+            return op
+        vidai=0
+        s,e=0,op-1
+        summa=1
+        f,l=0,1
+        while s<op-1 and l<op:
+            while l<op:
+                if prices[f]-prices[l]==1:
+                    summa+=1
+                    f+=1
+                    l+=1
+
+                else:
+                    s=l
+                    f,l=s,s+1
+                    vidai+=(summa*(summa+1))//2
+                    summa=1
+            vidai+=(summa*(summa+1))//2
+        return vidai
+
+
+
+
+        
