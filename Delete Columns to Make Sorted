@@ -1,0 +1,13 @@
+class Solution:
+    def minDeletionSize(self, strs: List[str]) -> int:
+        vidai=0
+        for j in range(len(strs[0])):
+            lp=strs[0][j]
+            for k in range(1,len(strs)):
+                if lp>strs[k][j]:
+                    vidai+=1
+                    break
+                lp=strs[k][j]
+        return vidai
+                
+        
