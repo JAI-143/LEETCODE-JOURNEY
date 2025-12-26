@@ -1,0 +1,26 @@
+class Solution:
+    def bestClosingTime(self, customers: str) -> int:
+        l=len(customers)
+        yku=[0]
+        p=0
+        for j in customers[::-1]:
+            if j=="Y":
+                p+=1
+            yku.append(p)
+        yku,p=yku[::-1],0
+        nku=[0]
+        for j in customers:
+            if j=="N":
+                p+=1
+            nku.append(p)
+        vidai=float("inf")
+        pulli=0
+
+        for j in range(l+1):
+            if vidai>nku[j]+yku[j]:
+                vidai=nku[j]+yku[j]
+                pulli=j
+        return pulli
+
+
+        
