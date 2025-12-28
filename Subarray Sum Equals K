@@ -1,0 +1,22 @@
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        l=len(nums)
+        vidai=0
+        dabba={0:1}
+        kootal=0
+
+        for j in range(l):
+            
+            p=kootal+nums[j]
+            if p-k in dabba:
+                vidai+=dabba[p-k]
+            if p in dabba:
+                dabba[p]+=1
+            else:
+                dabba[p]=1
+
+            kootal+=nums[j]
+
+        return vidai
+
+    
