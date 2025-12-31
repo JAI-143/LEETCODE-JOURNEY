@@ -1,3 +1,13 @@
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        kp=Counter(nums)
+        lol=dict(sorted(kp.items(),key=lambda x:x[1],reverse=True))
+        return list(lol.keys())[:k]
+
+*************************
+
+
+
 
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
