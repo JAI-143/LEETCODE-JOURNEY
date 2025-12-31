@@ -1,15 +1,26 @@
-class Solution(object):
-    def lengthOfLongestSubstring(self, s):
-        def track(str_data):
-            out=""
-            for i in str_data:
-                if i not in out:
-                    out+=i
-                else:
-                    break
-            return len(out)
-        max_val=0
-        for i in range(len(s)):
-            max_val=max(max_val,track(s[i:]))
-        return max_val
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        dabba={}
+        f,l=0,0
+        vidai=0
+        while l<len(s):
+            
+            if s[l] not in dabba:
+                dabba[s[l]]=l
+                
+                vidai=max(vidai,l-f+1)
+                l+=1
+                
+                
+            else:
+                f=dabba[s[l]]+1
+                kp=list(dabba.keys())
+                k=kp[:kp.index(s[l])+1]
+                for h in k:
+
+                    del dabba[h]
+        return vidai
+                
+
+
         
