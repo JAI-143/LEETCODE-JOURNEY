@@ -18,3 +18,33 @@ class Solution:
             c+=1
             return c
         return 0
+
+
+***********************************
+
+
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        if not nums:
+            return 0
+        nums=list(sorted(set(nums)))
+        s,e=0,1
+        vidai=1
+        print(nums)
+        while e<len(nums):
+            if nums[e]-nums[e-1]==1:
+                vidai=max(vidai,e-s+1)
+                e+=1
+            else:
+                s=e
+                e=s+1
+        return vidai
+
+            
+
+
+
+        
+
+
+
