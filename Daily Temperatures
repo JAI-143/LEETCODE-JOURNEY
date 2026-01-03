@@ -1,0 +1,19 @@
+class Solution:
+    def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
+        l=len(temperatures)
+        vidai=[0]*l
+        dabba=[]
+        potti={}
+        for j in range(-1,-(l+1),-1):
+            lp=0
+            while dabba and dabba[-1]<=temperatures[j]:
+                dabba.pop()
+            if dabba:
+                vidai[j]=potti[dabba[-1]]-j
+            dabba.append(temperatures[j])
+            potti[temperatures[j]]=j
+        return vidai
+
+                 
+            
+        
