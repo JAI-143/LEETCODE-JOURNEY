@@ -1,0 +1,36 @@
+class Solution:
+    def decodeString(self, s: str) -> str:
+        vidai=""
+        dabba=[]
+        potti=[]
+        lop=[]
+        j=0
+        while j<len(s):
+            if s[j]=="]":
+                lk=potti.pop()
+                while lk!="[":
+                    lop.insert(0,lk)
+                    lk=potti.pop()
+                l=dabba.pop()
+                if not potti:
+                    vidai+=("".join(lop))*l
+                    lop=[]
+                else:
+                    potti.append(("".join(lop))*l)
+                    lop=[]
+            elif s[j].isnumeric():
+                kop=""
+                while s[j].isnumeric():
+                    kop+=s[j]
+                    j+=1
+
+                dabba.append(int(kop))
+                potti.append("[")
+            else:
+                potti.append(s[j])
+            j+=1
+        if potti:
+            vidai+="".join(potti)
+        return vidai
+            
+        
