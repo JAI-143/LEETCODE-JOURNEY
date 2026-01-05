@@ -1,0 +1,22 @@
+class Solution:
+    def evalRPN(self, tokens: List[str]) -> int:
+        dabba=[]
+        for j in tokens:
+            if j not in "*/+-":
+                dabba.append(int(j))
+            else:
+                l1=dabba.pop()
+                l2=dabba.pop()
+                if j=="*":
+                    dabba.append(l2*l1)
+                elif j=="/":
+                    dabba.append(int(l2/l1))
+                elif j=="-":
+                    dabba.append(l2-l1)
+                else:
+                    dabba.append(l2+l1)
+        return dabba[0]
+
+
+
+        
