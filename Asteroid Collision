@@ -1,0 +1,40 @@
+class Solution:
+    def asteroidCollision(self, asteroids: List[int]) -> List[int]:
+        dabba=[]
+        l=0
+        while l<len(asteroids):
+            if asteroids[l]>0:
+                dabba.append(asteroids[l])
+                l+=1
+                continue
+            else:
+                if dabba and dabba[-1]>0:
+                    if dabba[-1]+asteroids[l]>dabba[-1]:
+                        dabba.append(asteroids[l])
+                        l+=1
+                    elif dabba[-1]+asteroids[l]==0:
+                        dabba.pop()
+                        l+=1
+                    elif dabba[-1]+asteroids[l]<0:
+                        dabba.pop()
+                    elif dabba[-1]+asteroids[l]<dabba[-1]:
+                        l+=1
+                        continue
+                else:
+                    if dabba and dabba[-1]<0:
+                        if dabba[-1]+asteroids[l]<dabba[-1]:
+                            dabba.append(asteroids[l])
+                            l+=1
+                        elif dabba[-1]+asteroids[l]>=0:
+                            dabba.pop()
+                        elif dabba[-1]+asteroids[l]>dabba[-1]:
+                            l+=1
+                            continue
+                    else:
+                        dabba.append(asteroids[l])
+                        l+=1
+
+
+                    
+        return dabba
+        
