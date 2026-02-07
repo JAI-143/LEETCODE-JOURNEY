@@ -1,0 +1,17 @@
+class Solution:
+    def minimumDeletions(self, s: str) -> int:
+        dabba=list(s)
+        lp=0
+        a,b,vidai=0,0,0
+        while lp<len(s):
+            if s[lp]=="b":
+                b+=1
+            
+            else:
+                if b :
+                    vidai+=1
+                    b-=1
+            lp+=1
+        return vidai
+
+        
