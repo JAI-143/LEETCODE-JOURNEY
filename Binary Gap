@@ -1,0 +1,27 @@
+class Solution:
+    def binaryGap(self, n: int) -> int:
+        vidai=0
+        kp=str(bin(n))
+        s,e=0,0
+
+        while e<len(kp):
+            if kp[s]=="1":
+                e+=1
+                while e<len(kp)-1 and kp[e]!="1":
+                    e+=1
+                if e<len(kp) and kp[e]=="1":
+                        
+                    vidai=max(vidai,(e-s))
+                    s=e
+            else:
+                s+=1
+                e=s
+        return vidai
+
+
+
+        
+                
+
+
+        
