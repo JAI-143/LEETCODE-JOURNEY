@@ -1,0 +1,22 @@
+class Solution:
+    def numSpecial(self, mat: List[List[int]]) -> int:
+        vidai=0
+        for j in range(len(mat)):
+            for k in range(len(mat[0])):
+                lop=mat[j][k]
+                if lop==1:
+                    ro=1
+                    col=1
+                    for op in range(len(mat)):
+                        if  mat[op][k] and j!=op:
+                            col=0
+                            break
+                    if col:
+                            
+                        for kp in range(len(mat[j])):
+                            if mat[j][kp] and kp!=k:
+                                ro=0
+                                break
+                    if ro and col:
+                        vidai+=1
+        return vidai
