@@ -1,0 +1,9 @@
+class Solution:
+    def checkOnesSegment(self, s: str) -> bool:
+        lop=s.count("1")
+        if lop>1:
+            return True if "1"*lop in s else False
+        return True
+
+
+        
