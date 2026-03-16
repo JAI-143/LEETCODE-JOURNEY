@@ -1,0 +1,30 @@
+class Solution:
+    def longestOnes(self, nums: List[int], k: int) -> int:
+        s,e=0,0
+        vidai=0
+        one_count=0
+        zero_count=0
+        while e<len(nums):
+            if nums[e]==1:
+                one_count+=1
+                e+=1
+            elif nums[e]==0 and zero_count<k:
+                e+=1
+                zero_count+=1
+            else:
+                dummy=0
+                while zero_count>=k and s<e:
+                    if nums[s]==0:
+                        zero_count-=1
+                        dummy=1
+                    else:
+                        one_count-=1
+                        dummy=1
+                    s+=1
+                if not dummy:
+                    e+=1
+                    s=e
+            vidai=max(one_count+zero_count,vidai)
+            
+        return vidai
+        
