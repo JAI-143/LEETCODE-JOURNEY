@@ -1,0 +1,32 @@
+class Solution:
+    def maxVowels(self, s: str, k: int) -> int:
+
+        pulli=k
+        first=deque(s[:pulli])
+        max_vowel = 0
+        current_vowel=0
+        vowel="aeiou"
+        for j in first:
+            if j in vowel:
+                current_vowel+=1
+        max_vowel=max(current_vowel,max_vowel)
+        while pulli<len(s):
+            print(pulli)
+            if first[0] in vowel and s[pulli] in vowel:
+                pass
+            elif first[0] in vowel and s[pulli] not in vowel:
+                current_vowel-=1
+
+            elif first[0] not in vowel and s[pulli] in vowel:
+                current_vowel+=1
+            first.popleft()
+            first.append(s[pulli])
+            max_vowel=max(current_vowel,max_vowel)
+            pulli+=1
+        return max_vowel
+
+
+
+
+
+        
