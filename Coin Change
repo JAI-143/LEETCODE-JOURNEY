@@ -1,0 +1,8 @@
+class Solution:
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        dabba=[float('inf')]*(amount+1)
+        dabba[0]=0
+        for j in coins:
+            for k in range(j,len(dabba)):
+                dabba[k]=min(dabba[k],dabba[k-j]+1)
+        return dabba[amount] if dabba[amount]!=float('inf') else -1
