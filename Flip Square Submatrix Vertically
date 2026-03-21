@@ -1,0 +1,22 @@
+import copy
+class Solution:
+    def reverseSubmatrix(self, grid: List[List[int]], x: int, y: int, k: int) -> List[List[int]]:
+        dummy_grid=copy.deepcopy(grid)
+        row_max,column_max=(x+k)-1,(y+k)-1
+        for j in range(k):
+            row,column=x,y
+            r1=row_max
+            while row<r1:
+                dummy_grid[row][column]=grid[r1][column]
+                row+=1
+                r1-=1
+            while r1>=x:
+                dummy_grid[row][column]=grid[r1][column]
+                row+=1
+                r1-=1                                                        
+            if y<column_max:
+
+                y+=1
+        return dummy_grid
+
+
