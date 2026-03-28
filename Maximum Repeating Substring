@@ -1,0 +1,32 @@
+class Solution:
+    def maxRepeating(self, sequence: str, word: str) -> int:
+        wl=len(word)
+        sl=len(sequence)
+        max_count=0
+        for n in range(len(sequence)):
+            if sequence[n:n+wl]==word:
+                sub_count=0
+                l2=n+wl
+                lp=n
+                while sequence[lp:l2]==word:
+                    sub_count+=1
+                    if l2+wl<=sl:
+
+                        l2+=wl
+                        lp+=wl
+                    else:
+                        break
+                max_count=max(sub_count,max_count)
+        return max_count
+                
+                
+
+
+
+
+                
+
+
+
+
+        
