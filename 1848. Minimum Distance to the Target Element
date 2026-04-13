@@ -1,0 +1,20 @@
+class Solution:
+    def getMinDistance(self, nums: List[int], target: int, start: int) -> int:
+        front_dist=back_dist=0
+        front_point=back_point=start
+        while 1:
+            if nums[front_point]==target:
+                return front_dist
+
+            elif nums[back_point]==target:
+                return back_dist
+            else:
+                if front_point<len(nums)-1:
+
+                    front_point+=1
+                    front_dist+=1
+                if back_point>0:
+
+                    back_point-=1
+                    back_dist+=1
+        
